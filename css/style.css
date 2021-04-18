@@ -1,0 +1,109 @@
+/*******  BASIC SETTINGS *******/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Bright_orange: hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan: hsl(179, 100%, 13%);
+    --Paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-grey: hsl(0, 0%, 95%);
+}
+body {
+    font-size: 15px;
+}
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Paragraphs);
+    line-height: 24px;
+    text-align: left;
+}
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-grey);
+    text-transform: uppercase;
+    padding: 24px 0;
+    font-size: 2.5rem;
+}
+.container {
+    max-width: 1440px;
+    height: 900px;
+    margin: 0 auto;
+    background: var(--Very-light-grey);
+}
+
+/******** CARDS *********/
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 995px;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 60px;
+    width:  100%;
+}
+.card img {
+    width: 30%;
+}
+.sedan {
+    background-color: var(--Bright_orange);
+    border-radius: 10px 0 0 10px;
+}
+.suv {
+    background-color: var(--Dark_cyan);
+}
+.luxury {
+    background-color: var(--Very_dark_cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+
+/******  BUTTON ******/
+.button {
+    margin-top: 80px;
+    background-color: var(--Very-light-grey);
+    border-radius: 24px;
+    padding: 15px;
+    border: none;
+    width: 150px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.sedan .button {
+    color: var(--Bright_orange);
+}
+.suv .button {
+    color: var(--Dark_cyan);
+}
+.luxury .button {
+    color: var(--Very_dark_cyan);
+}
+
+
+@media (max-width: 988px){
+
+    .container {
+        height: auto;
+    }
+    .card-wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .card {
+        width: 350px;
+    }
+    .sedan {
+        border-radius: 10px 10px 0 0;
+    }
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
